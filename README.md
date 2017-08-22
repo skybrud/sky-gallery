@@ -10,7 +10,9 @@ A Vue component gallery with lightbox.
 ## Usage
 
 ` <sky-gallery
+`
 `	:items="itemsArray"
+`
 `	lightbox="lightboxName"	
 `	></sky-gallery>
 
