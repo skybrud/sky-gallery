@@ -9,12 +9,7 @@ A Vue component gallery with lightbox.
 
 ## Usage
 
-` <sky-gallery
-`
-`	:items="itemsArray"
-`
-`	lightbox="lightboxName"	
-`	></sky-gallery>
+` <sky-gallery :items="itemsArray" lightbox="lightboxName"></sky-gallery>
 
 `lightbox` is optional, and should only be filled if you intend
 to use `sky-lightbox` together with the gallery. `lightbox` should be
