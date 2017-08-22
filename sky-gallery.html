@@ -1,0 +1,18 @@
+<div class="sky-gallery">
+	<ul class="gallery">
+		<li
+			v-for="(item, index) in items"
+			v-on:click="openLightbox(index)">
+
+			<sky-crop v-bind:src="item.src"></sky-crop>
+		</li>
+	</ul>
+
+	<template v-if="lightbox">
+		<sky-lightbox
+			type="images"
+			v-bind:name="lightbox"
+			v-bind:items="items">
+		</sky-lightbox>
+	</template>
+</div>
