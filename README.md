@@ -5,7 +5,7 @@ A Vue component gallery with lightbox.
 ## Dependencies
 
 - [sky-crop](https://github.com/skybrud/sky-crop/)
-- [sky-lightbox](httos://github.com/skybrud/sky-lightbox/) - optional
+- [sky-lightbox](https://github.com/skybrud/sky-lightbox/) - optional
 
 ## Usage
 
