@@ -1,4 +1,4 @@
-#sky-gallery
+# sky-gallery
 
 A Vue component gallery with lightbox.
 
