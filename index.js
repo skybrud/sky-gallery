@@ -1,6 +1,6 @@
 import Vue from 'vue';
-import SkyGallery from './sky-gallery';
+import SkyGallery from './SkyGallery';
 
-Vue.component('sky-gallery', SkyGallery);
+Vue.component('SkyGallery', SkyGallery);
 
 export default SkyGallery;

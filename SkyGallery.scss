@@ -1,0 +1,69 @@
+@import '~styles/variables';
+@import '~styles/utilities/mixins';
+
+.sky-gallery {
+	.gallery {
+		@include grid(margin-right, -1);
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+
+		& > li {
+			@include grid(padding-right);
+			position: relative;
+			cursor: pointer;
+			transition: opacity .3s $CubicInOut;
+			overflow: hidden;
+			margin-left: 0;
+
+			&:nth-of-type(n+3) {
+				@include grid(margin-top, 1, 0, 10);
+			}
+
+			&:nth-of-type(n+4) {
+				@include grid(margin-top, 1, 10);
+			}
+		}
+	}
+
+	.sky-crop {
+		@include grid(height, 13.36, 0, 10);
+		@include grid(width, 18.5, 0, 10);
+		@include grid(height, 8.67, 10, 20);
+		@include grid(width, 12, 10, 20);
+		@include grid(height, 6.21, 20, 30);
+		@include grid(width, 8.6, 20, 30);
+		@include grid(height, 6.72, 30);
+		@include grid(width, 9.32, 30);
+
+		&:before {
+			@include grid(background-size, 1.25);
+			content: '';
+			color: #fff;
+			display: block;
+			position: absolute;
+			top: -5px;
+			right: -5px;
+			bottom: -5px;
+			left: -5px;
+			z-index: 5;
+			background-color: transparentize($color-blue, 1);
+			background-image: url('~static/cross.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.3s;
+		}
+
+		@include hover {
+			&:before {
+				background-color: transparentize($color-blue, 0.2);
+				opacity: 1;
+			}
+		}
+	}
+}

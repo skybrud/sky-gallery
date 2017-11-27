@@ -2,17 +2,20 @@
 	<ul class="gallery">
 		<li
 			v-for="(item, index) in items"
-			v-on:click="openLightbox(index)">
+			@click="openLightbox(index)">
 
-			<sky-crop v-bind:src="item.src"></sky-crop>
+			<SkyCrop
+				mode="cover"
+				:src="item.imageUrl"
+			/>
 		</li>
 	</ul>
 
 	<template v-if="lightbox">
-		<sky-lightbox
+		<SkyLightbox
 			type="images"
-			v-bind:name="lightbox"
-			v-bind:items="items">
-		</sky-lightbox>
+			:name="lightboxId"
+			:items="items"
+		/>
 	</template>
 </div>
