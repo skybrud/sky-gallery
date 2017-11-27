@@ -3,7 +3,6 @@
 
 .sky-gallery {
 	.gallery {
-		@include grid(margin-right, -1);
 		list-style-type: none;
 		margin-left: 0;
 		padding-left: 0;
@@ -12,7 +11,6 @@
 		margin-bottom: 0;
 
 		& > li {
-			@include grid(padding-right);
 			position: relative;
 			cursor: pointer;
 			transition: opacity .3s $CubicInOut;
@@ -30,14 +28,8 @@
 	}
 
 	.sky-crop {
-		@include grid(height, 13.36, 0, 10);
-		@include grid(width, 18.5, 0, 10);
-		@include grid(height, 8.67, 10, 20);
-		@include grid(width, 12, 10, 20);
-		@include grid(height, 6.21, 20, 30);
-		@include grid(width, 8.6, 20, 30);
-		@include grid(height, 6.72, 30);
-		@include grid(width, 9.32, 30);
+		width: 600px;
+		height: 440px;
 
 		&:before {
 			@include grid(background-size, 1.25);
@@ -50,7 +42,7 @@
 			bottom: -5px;
 			left: -5px;
 			z-index: 5;
-			background-color: transparentize($color-blue, 1);
+			background-color: transparentize($color-1, 1);
 			background-image: url('~static/cross.svg');
 			background-repeat: no-repeat;
 			background-position: center;
@@ -61,7 +53,7 @@
 
 		@include hover {
 			&:before {
-				background-color: transparentize($color-blue, 0.2);
+				background-color: transparentize($color-1, 0.2);
 				opacity: 1;
 			}
 		}
